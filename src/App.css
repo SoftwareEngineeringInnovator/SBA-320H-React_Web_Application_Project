@@ -30,3 +30,12 @@ header p {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+/* Style the section that contains the vulnerability search form */
+.search-section {
+  max-width: 900px;
+  margin: 25px auto 0;
+  padding: 30px;
+  background-color: black;
+  border-radius: 10px;
+}
