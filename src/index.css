@@ -1,0 +1,14 @@
+/* define sizing to every element on the page */
+* {
+  box-sizing: border-box;
+}
+
+/* provide style to the page layout */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial;
+  background-color: lightskyblue;
+  color: whitesmoke;
+}
