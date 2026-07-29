@@ -39,3 +39,8 @@ header p {
   background-color: black;
   border-radius: 10px;
 }
+/* Add margin below the search section */
+.search-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
