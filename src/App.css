@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
   font-family: Arial;
   background-color: lightskyblue;
-  color: black;
+  color: whitesmoke;
 }
 
 /* Add spacing around the main application content */
@@ -26,6 +26,7 @@ header {
   margin: 0 auto;
   padding: 30px;
   text-align: center;
-  background-color: whitesmoke;
+  background-color: black;
   border-radius: 10px;
 }
+
