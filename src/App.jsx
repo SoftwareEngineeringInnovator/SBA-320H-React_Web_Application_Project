@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import SearchForm from "./components/SearchForm";
 import "./App.css";
 
 function App() {
@@ -6,6 +7,9 @@ function App() {
     <main>
       {/* Display the Cybersecurity Application to search for vulnerabilities */}
       <Header />
+
+      {/* Display the vulnerability search form */}
+      <SearchForm />
     </main>
   );
 }
