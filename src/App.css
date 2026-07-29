@@ -12,3 +12,10 @@ body {
   background-color: lightskyblue;
   color: black;
 }
+
+/* Add spacing around the main application content */
+main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
