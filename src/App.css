@@ -44,3 +44,9 @@ header p {
   margin-top: 0;
   margin-bottom: 20px;
 }
+/* Arrange the form elements under column */
+.search-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
