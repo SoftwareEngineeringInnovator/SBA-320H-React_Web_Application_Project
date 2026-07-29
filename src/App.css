@@ -19,3 +19,13 @@ main {
   min-height: 100vh;
   padding: 40px 20px;
 }
+
+/* Style the introductory section at the top of the page */
+header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
