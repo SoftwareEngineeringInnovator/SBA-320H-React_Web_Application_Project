@@ -1,15 +1,24 @@
 import { useState } from "react";
 
+
+
 function SearchForm() {
 
     // Store the text entered in the search input
-  const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState("");
+
+    // Handle the form when the user clicks the Search button
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        console.log("Search submitted:", searchTerm);
+    }
 
     return (
         <section className="search-section">
             <h2>Search for Vulnerabilities</h2>
 
-            <form>
+            <form onSubmit={handleSubmit}>
                 {/* The label explains what information the user should enter */}
 
                 <label htmlFor="search-input">Enter a product, technology, or CVE identification number: </label>
