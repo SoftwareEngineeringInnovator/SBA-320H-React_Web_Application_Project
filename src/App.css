@@ -50,3 +50,27 @@ header p {
   flex-direction: column;
   gap: 12px;
 }
+
+/* Make the form label easier to read */
+.search-section label {
+  font-weight: bold;
+}
+/* Style the search input field */
+.search-section input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+/* Style the search button. */
+.search-section button {
+  width: 120px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
