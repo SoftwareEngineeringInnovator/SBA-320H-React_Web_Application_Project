@@ -8,14 +8,14 @@ function App() {
   function handleSearch(searchTerm) {
     console.log("Search received by App:", searchTerm);
   }
-  
+
   return (
     <main>
       {/* Display the Cybersecurity Application to search for vulnerabilities */}
       <Header />
 
       {/* Display the vulnerability search form */}
-      <SearchForm />
+      <SearchForm onSearch={handleSearch} />
     </main>
   );
 }

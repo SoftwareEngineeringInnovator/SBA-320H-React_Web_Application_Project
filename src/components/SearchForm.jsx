@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 
-function SearchForm() {
+function SearchForm({ onSearch }) {
 
     // Store the text entered in the search input
     const [searchTerm, setSearchTerm] = useState("");
@@ -11,7 +11,10 @@ function SearchForm() {
     function handleSubmit(event) {
         event.preventDefault();
 
-        console.log("Search submitted:", searchTerm);
+        onSearch(searchTerm);
+
+        // Test the output of the search field
+        // console.log("Search submitted:", searchTerm);
     }
 
     return (
