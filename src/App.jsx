@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
 import { useReducer } from "react";
 import { initialSearchState, searchReducer, } from "./reducers/searchReducer";
+import { fetchVulnerabilities } from "./services/nvdApi";
 import "./App.css";
 
 function App() {
@@ -9,10 +10,27 @@ function App() {
   const [searchState, dispatch] = useReducer(searchReducer, initialSearchState,);
 
   // Receive the search term submitted by the SearchForm component
-  function handleSearch(searchTerm) {
-    console.log("Search received by App:", searchTerm);
-
+  async function handleSearch(searchTerm) {
     dispatch({ type: "SEARCH_STARTED" });
+
+    try {
+      const data = await fetchVulnerabilities(searchTerm);
+
+      console.log("NVD API response:", data);
+
+      dispatch({
+        type: "SEARCH_SUCCESS",
+        payload: {
+          vulnerabilities: data.vulnerabilities,
+          totalResults: data.totalResults,
+        },
+      });
+    } catch (error) {
+      dispatch({
+        type: "SEARCH_ERROR",
+        payload: error.message,
+      });
+    }
   }
 
   return (
@@ -24,7 +42,13 @@ function App() {
       <SearchForm onSearch={handleSearch} />
 
       {/* Temporarily confirm that the reducer received the action */}
-      {searchState.loading && <p>Preparing vulnerability search...</p>}
+      {searchState.loading && <p>Searching for vulnerabilities...</p>}
+
+      {searchState.error && <p>{searchState.error}</p>}
+
+      {!searchState.loading && !searchState.error && searchState.totalResults > 0 && (
+          <p>Total vulnerabilities found: {searchState.totalResults}</p>
+        )}
     </main>
   );
 }
