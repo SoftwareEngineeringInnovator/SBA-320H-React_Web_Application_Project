@@ -3,6 +3,7 @@ import SearchForm from "./components/SearchForm";
 import { useReducer } from "react";
 import { initialSearchState, searchReducer, } from "./reducers/searchReducer";
 import { fetchVulnerabilities } from "./services/nvdApi";
+import ResultsList from "./components/ResultsList";
 import "./App.css";
 
 function App() {
