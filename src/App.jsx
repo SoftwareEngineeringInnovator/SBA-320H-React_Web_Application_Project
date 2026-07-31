@@ -41,7 +41,7 @@ function App() {
       {/* Display the vulnerability search form */}
       <SearchForm onSearch={handleSearch} />
 
-      {/* Temporarily confirm that the reducer received the action */}
+      {/* Display the serach functionality from the user input */}
       {searchState.loading && <p>Searching for vulnerabilities...</p>}
 
       {searchState.error && <p>{searchState.error}</p>}
