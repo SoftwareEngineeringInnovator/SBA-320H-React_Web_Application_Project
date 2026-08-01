@@ -4,6 +4,7 @@ export const initialSearchState = {
   loading: false,
   error: "",
   totalResults: 0,
+  hasSearched: false,
 };
 
 // Update the search state based on the action received
@@ -14,6 +15,7 @@ export function searchReducer(state, action) {
         ...state,
         loading: true,
         error: "",
+        hasSearched: false,
       };
 
     case "SEARCH_SUCCESS":
@@ -23,6 +25,7 @@ export function searchReducer(state, action) {
         totalResults: action.payload.totalResults,
         loading: false,
         error: "",
+        hasSearched: true,
       };
 
     case "SEARCH_ERROR":
@@ -32,6 +35,7 @@ export function searchReducer(state, action) {
         totalResults: 0,
         loading: false,
         error: action.payload,
+        hasSearched: true,
       };
 
     default:
