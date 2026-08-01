@@ -33,7 +33,7 @@ function SearchForm({ onSearch }) {
             </form>
 
             {/* Temporarily display the entered text to test useState */}
-            <p>You are searching for: {searchTerm}</p>
+            {/* <p>You are searching for: {searchTerm}</p> */}
         </section>
     );
 }
