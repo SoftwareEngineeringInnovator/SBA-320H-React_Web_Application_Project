@@ -95,3 +95,12 @@ header p {
   border: 1px solid gray;
   border-radius: 10px;
 }
+
+.results-section {
+  max-width: 900px;
+  margin: 25px auto 0;
+  padding: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
