@@ -115,3 +115,26 @@ header p {
   color: white;
   border-radius: 10px;
 }
+
+/* Style the message displayed while the vulnerability search is loading */
+.status-message {
+  max-width: 900px;
+  margin: 25px auto 0;
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Style the message displayed when the API request fails */
+.error-message {
+  max-width: 900px;
+  margin: 25px auto 0;
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+}
