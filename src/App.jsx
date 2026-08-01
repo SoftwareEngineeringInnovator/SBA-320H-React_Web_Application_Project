@@ -43,16 +43,10 @@ function App() {
       <SearchForm onSearch={handleSearch} />
 
       {/* Display the serach functionality from the user input */}
-      {searchState.loading && <p>Searching for vulnerabilities...</p>}
-
-      {searchState.error && <p>{searchState.error}</p>}
-
-      {!searchState.loading && !searchState.error && searchState.totalResults > 0 && (
-          <p>Total vulnerabilities found: {searchState.totalResults}</p>
-        )}
-
-        {/* Provides back the search result  and the description of the issue */}
-        <ResultsList vulnerabilities={searchState.vulnerabilities} />
+      <ResultsList
+        vulnerabilities={searchState.vulnerabilities}
+        totalResults={searchState.totalResults}
+      />
     </main>
   );
 }

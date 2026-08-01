@@ -1,4 +1,4 @@
-function ResultsList({ vulnerabilities }) {
+function ResultsList({ vulnerabilities, totalResults }) {
     // Do not display the results section when there are no vulnerabilities
     if (vulnerabilities.length === 0) {
         return null;
@@ -7,6 +7,10 @@ function ResultsList({ vulnerabilities }) {
     return (
         <section className="results-section">
             <h2>Search Results</h2>
+            {/* DIsplay the amount of result found for every item */}
+            <p className="results-total">
+                Total vulnerabilities found: {totalResults}
+            </p>
 
             <div className="results-list">
                 {vulnerabilities.map((vulnerability) => {
