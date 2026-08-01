@@ -43,10 +43,14 @@ function App() {
       <SearchForm onSearch={handleSearch} />
 
       {/* Display a message while the API request is loading */}
-      {searchState.loading && <p>Searching for vulnerabilities...</p>}
+      {searchState.loading && (
+        <p className="status-message">Searching for vulnerabilities...</p>
+        )}
 
       {/* Display an error message if the API request fails */}
-      {searchState.error && <p>{searchState.error}</p>}
+      {searchState.error && (
+        <p className="error-message">{searchState.error}</p>
+        )}
 
       {/* Display a message when the completed search has no results */}
       {searchState.hasSearched && !searchState.loading && !searchState.error && searchState.totalResults === 0 && (
