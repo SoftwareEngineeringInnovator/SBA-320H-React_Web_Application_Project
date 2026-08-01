@@ -104,3 +104,14 @@ header p {
   color: white;
   border-radius: 10px;
 }
+
+/* Style the message displayed when no vulnerabilities are found */
+.no-results-message {
+  max-width: 900px;
+  margin: 25px auto 0;
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
