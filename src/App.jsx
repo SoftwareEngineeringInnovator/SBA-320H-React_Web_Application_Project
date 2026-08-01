@@ -49,10 +49,7 @@ function App() {
       {searchState.error && <p>{searchState.error}</p>}
 
       {/* Display a message when the completed search has no results */}
-      {searchState.hasSearched &&
-        !searchState.loading &&
-        !searchState.error &&
-        searchState.totalResults === 0 && (
+      {searchState.hasSearched && !searchState.loading && !searchState.error && searchState.totalResults === 0 && (
           <p className="no-results-message">
             No vulnerabilities were found. Please try another search.
           </p>
