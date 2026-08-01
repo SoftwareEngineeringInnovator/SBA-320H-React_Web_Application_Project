@@ -87,3 +87,11 @@ header p {
   flex-direction: column;
   gap: 20px;
 }
+
+/* Style the vulnerability result card */
+.vulnerability-card {
+  padding: 25px;
+  background-color: black;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
