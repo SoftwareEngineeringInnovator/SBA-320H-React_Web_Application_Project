@@ -74,3 +74,9 @@ header p {
   background-color: white;
   color: black;
 }
+
+/* Style the section that displays the vulnerability results */
+.results-section {
+  max-width: 900px;
+  margin: 25px auto 0;
+}
