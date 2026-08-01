@@ -19,7 +19,7 @@ function ResultsList({ vulnerabilities, totalResults }) {
                     // Vulnerability description
                     const description = cve.descriptions[0]?.value || "No description is available, please verify your search";
 
-                    // Format the published date so it is easier to read.
+                    // Format the published date so it is easier to read
                     const publishedDate = cve.published ? new Date(cve.published).toLocaleDateString() : "Not available";
 
                     return (
