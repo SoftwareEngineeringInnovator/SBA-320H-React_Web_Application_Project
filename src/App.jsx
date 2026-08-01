@@ -42,7 +42,23 @@ function App() {
       {/* Display the vulnerability search form */}
       <SearchForm onSearch={handleSearch} />
 
-      {/* Display the serach functionality from the user input */}
+      {/* Display a message while the API request is loading */}
+      {searchState.loading && <p>Searching for vulnerabilities...</p>}
+
+      {/* Display an error message if the API request fails */}
+      {searchState.error && <p>{searchState.error}</p>}
+
+      {/* Display a message when the completed search has no results */}
+      {searchState.hasSearched &&
+        !searchState.loading &&
+        !searchState.error &&
+        searchState.totalResults === 0 && (
+          <p className="no-results-message">
+            No vulnerabilities were found. Please try another search.
+          </p>
+        )}
+
+      {/* Display the vulnerabilities returned by the API */}
       <ResultsList
         vulnerabilities={searchState.vulnerabilities}
         totalResults={searchState.totalResults}
