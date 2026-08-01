@@ -80,3 +80,10 @@ header p {
   max-width: 900px;
   margin: 25px auto 0;
 }
+
+/* Provide spacing between each vulnerability result */
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
