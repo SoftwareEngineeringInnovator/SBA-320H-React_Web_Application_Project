@@ -27,7 +27,7 @@ function SearchForm({ onSearch }) {
                 <label htmlFor="search-input">Enter a product, technology, or CVE identification number: </label>
 
                 <input id="search-input" type="text" placeholder="Example: Windows or CVE-2021-44228"
-                    value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
+                    value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} required/>
 
                 <button type="submit">Search</button>
             </form>
